@@ -1,0 +1,124 @@
+###
+GET http://localhost:3000/pokemons
+
+###
+
+POST http://localhost:3000/pokemons/objeto
+Content-Type: application/json
+
+{
+    "nome": "Pikachu",
+    "tipo": "Electric",
+    "nivel": "25",
+    "evolucao": "Raichu"
+}
+
+###
+
+POST http://localhost:3000/pokemons
+Content-Type: application/json
+
+[
+    {
+    "nome": "Bulbasaur",
+    "tipo": "Grass/Poison",
+    "nivel": "20",
+    "evolucao": "Ivysaur"
+    },
+    {
+    "nome": "Charmander",
+    "tipo": "Fire",
+    "nivel": "15",
+    "evolucao": "Charmeleon"
+    },
+    {
+    "nome": "Squirtle",
+    "tipo": "Water",
+    "nivel": "10",
+    "evolucao": "Wartortle"
+    },
+    {
+    "nome": "Jigglypuff",
+    "tipo": "Normal/Fairy",
+    "nivel": "5",
+    "evolucao": "Wigglytuff"
+    },
+    {
+    "nome": "Meowth",
+    "tipo": "Normal",
+    "nivel": "8",
+    "evolucao": "Persian"
+    },
+    {
+    "nome": "Psyduck",
+    "tipo": "Water",
+    "nivel": "12",
+    "evolucao": "Golduck"
+    },
+    {
+    "nome": "Eevee",
+    "tipo": "Normal",
+    "nivel": "18",
+    "evolucao": "Vaporeon/Jolteon/Flareon"
+    },
+    {
+    "nome": "Snorlax",
+    "tipo": "Normal",
+    "nivel": "35",
+    "evolucao": "Sem evolucao"
+    },
+    {
+    "nome": "Gengar",
+    "tipo": "Ghost/Poison",
+    "nivel": "28",
+    "evolucao": "Sem evolucao"
+    },
+    {
+    "nome": "Dragonite",
+    "tipo": "Dragon/Flying",
+    "nivel": "40",
+    "evolucao": "Sem evolucao"
+    },
+    {
+    "nome": "Mewtwo",
+    "tipo": "Psychic",
+    "nivel": "50",
+    "evolucao": "Sem evolucao"
+    },
+    {
+    "nome": "Mew",
+    "tipo": "Psychic",
+    "nivel": "45",
+    "evolucao": "Sem evolucao"
+    },
+    {
+    "nome": "Lucario",
+    "tipo": "Fighting/Steel",
+    "nivel": "30",
+    "evolucao": "Sem evolucao"
+    },
+    {
+    "nome": "Greninja",
+    "tipo": "Water/Dark",
+    "nivel": "25",
+    "evolucao": "Sem evolucao"
+    }
+]
+
+###
+
+PUT http://localhost:3000/pokemons/1
+Content-Type: application/json
+
+{
+
+    "nome": "Pikachu",
+    "tipo": "Electric",
+    "nivel": "30",
+    "evolucao": "Raichu"
+
+}
+
+###
+
+DELETE http://localhost:3000/pokemons/1

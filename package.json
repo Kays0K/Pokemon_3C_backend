@@ -1,0 +1,25 @@
+{
+  "name": "pokemon_3c_backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kays0K/Pokemon_3C_backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kays0K/Pokemon_3C_backend/issues"
+  },
+  "homepage": "https://github.com/Kays0K/Pokemon_3C_backend#readme",
+  "dependencies": {
+    "fastify": "^5.8.1",
+    "pg": "^8.20.0"
+  }
+}
