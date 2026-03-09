@@ -60,8 +60,9 @@ server.put('/pokemons/:id', async (request, reply) => {
 
     const pokemonExistente = await sql.query('SELECT * FROM pokemons WHERE id = $1', [id]);
 
-    console.log(pokemonExistente);
-
+    if (pokemonExistente.rows.length === 0) {
+    reply.status(400).send({ message: 'Pokemon não encontrado!' });
+    }
     const resultado = await sql.query('UPDATE pokemons SET nome = $1, tipo = $2, nivel = $3, evolucao = $4 WHERE id = $5', [body.nome, body.tipo, body.evolucao, body.nivel, id]);
     reply.status(200).send({ message: 'Pokemon atualizado com sucesso!' });
 });

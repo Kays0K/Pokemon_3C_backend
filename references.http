@@ -107,7 +107,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:3000/pokemons/1
+PUT http://localhost:3000/pokemons/9
 Content-Type: application/json
 
 {
