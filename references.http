@@ -121,4 +121,4 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/pokemons/1
+DELETE http://localhost:3000/pokemons/9

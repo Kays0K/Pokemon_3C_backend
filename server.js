@@ -72,6 +72,12 @@ server.delete('/pokemons/:id', async (request, reply) => {
     if (!id) {
         reply.status(400).send({ message: 'ID do Pokemon é obrigatório!' });
     }
+
+    const pokemonExistente = await sql.query('SELECT * FROM pokemons WHERE id = $1', [id]);
+
+    if (pokemonExistente.rows.length === 0) {
+    reply.status(400).send({ message: 'Pokemon não encontrado!' });
+    }
     const resultado = await sql.query('DELETE FROM pokemons WHERE id = $1', [id]);
     reply.status(200).send({ message: 'Pokemon deletado com sucesso!' });
 });
